@@ -1,0 +1,70 @@
+
+
+.cardCharacter {
+    margin-bottom: 8vh;
+    margin-right: 5vw;
+    padding: 2vw 2vh;
+    background-color: transparent;
+    width: 300px;
+    height: 380px;
+    perspective: 1000px;
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-weight: 500; 
+  }
+
+  .flipCard{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 2vw 2vh;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .cardCharacter:hover .flipCard {
+    transform: rotateY(180deg);
+  } 
+
+.frontCard, .cardInfo{
+    box-shadow: 0 4px 10px #7cf448;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid #7cf448;
+  border-radius: 1rem;
+}
+
+.frontCard{
+  background: linear-gradient(120deg, #33353a 60%, #292a2d 88%,
+  #33353a 40%, #292a2d 48%);
+  color: white;
+}
+
+.cardImage{
+    width: 5vw 5vh;
+    padding: 0.5vw;
+    border-radius: 1vw;
+}
+
+.cardInfo{
+  
+  background: linear-gradient(120deg, #aeff8b 30%, #7cf448 88%,
+  #aeff8b 40%, #7cf448 78%);
+  color: black;
+  transform: rotateY(180deg);
+}
+
+.cardInfo h4{
+    margin: 1vh 2vw; 
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-weight: 500;
+
+}
